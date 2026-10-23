@@ -560,6 +560,9 @@
         <div class="card">
             <div class="venue-title"><i class="fas fa-map-marker-alt"></i> موعد ومكان الحفل</div>
             <p style="color: #fff; font-size: 1.2rem; margin: 10px 0;">الأحد، 15 نوفمبر 2026</p>
+            <p style="color: var(--gold-light); font-size: 1.1rem; margin: 5px 0;">
+    <i class="fas fa-clock"></i> الساعة 7:00 مساءً
+    </p>
             <div class="venue-name">قاعة G Marriott</div>
             <div class="venue-location">المنصورة - مصر</div>
             
@@ -591,10 +594,14 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label>عدد المرافقين:</label>
-                    <input type="number" name="guests" class="form-control" min="0" value="0">
-                </div>
+                  <div class="form-group">
+    <label>عدد الحاضرين:</label>
+    <select name="guests_count" class="form-control" style="width: 100%; padding: 10px; border-radius: 8px; background: rgba(0,0,0,0.3); color: #fff; border: 1px solid var(--gold-light);">
+        <option value="شخص واحد" style="color: #000;">شخص واحد (بمفردي)</option>
+        <option value="شخصين" style="color: #000;">شخصين</option>
+        <option value="أكثر من شخصين" style="color: #000;">أكثر من شخصين</option>
+    </select>
+</div>
 
                 <button type="submit" class="submit-btn">تأكيد الحضور</button>
             </form>
