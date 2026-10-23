@@ -500,8 +500,8 @@
             <div class="envelope-flap"></div>
             <div class="envelope-pockets"></div>
             
-            <!-- أساميكم باللون الذهبي اللامع فوق الختم على الظرف -->
-            <div class="envelope-names gold-shimmer">
+            <!-- أساميكم باللون الاسود فوق الختم على الظرف -->
+            <div class="envelope-names gold_shimmer">
                 محمد & روميساء
             </div>
 
@@ -524,11 +524,11 @@
             <p class="invitation-text">يتشرف كل من العائلتين بدعوتكم لحضور حفل زفاف</p>
             
             <!-- أسماء العرسان بالذهبي اللامع داخل الدعوة -->
-            <div class="couples-names">
-                <span class="gold-shimmer">محمد</span>
-                <span class="heart-icon"><i class="fas fa-heart"></i></span>
-                <span class="gold-shimmer">روميساء</span>
-            </div>
+               <div class="couples-names">
+                   <span style="color: #000000;">محمد</span>
+                   <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                   <span style="color: #000000;">روميساء</span>
+</div>
 
             <p class="invitation-text">وتكتمل فرحتنا بوجودكم وشرف حضوركم معنا في أجمل أيام حياتنا</p>
         </div>
@@ -601,30 +601,26 @@
             <div id="rsvp-status" style="margin-top: 10px; color: var(--gold-light); display: none;">تم ارسال تأكيدك بنجاح!</div>
         </div>
 
-        <!-- كارت التهاني والتبريكات -->
-        <div class="card">
-            <div class="venue-title"><i class="fas fa-comments"></i> دفتر التهاني والأمنيات</div>
-            <p class="invitation-text" style="font-size: 0.95rem;">شاركونا كلماتكم الطيبة وتهنئتكم</p>
-
-            <form id="comment-form">
-                <div class="form-group">
-                    <input type="text" id="comment-name" class="form-control" placeholder="اسمك" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="comment-message" class="form-control" rows="3" placeholder="اكتب تهنئتك للعريسين هنا..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">إضافة التهنئة</button>
-            </form>
-
-            <div class="comments-list" id="comments-container">
-                <div class="comment-item">
-                    <div class="comment-author">أحمد ومريم</div>
-                    <div class="comment-text">ألف ألف مبروك يا محمد ويا روميساء، بارك الله لكما وبارك عليكما وجمع بينكما في خير! ❤️✨</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+       <!-- كارت التهاني والتبريكات (Disqus) -->
+<div class="card">
+    <div class="venue-title"><i class="fas fa-comments"></i> دفتر التهاني والأمنيات</div>
+    <p class="invitation-text" style="font-size: 0.95rem;">شاركونا كلماتكم الطيبة وتهانيكم للعروسين ✨</p>
+    
+    <!-- كود Disqus للتعليقات التلقائية -->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;  
+            this.page.identifier = window.location.pathname; 
+        };
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mohamed-romisaa-wedding.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</div>
 
     <script>
         // --- 1. التعامل مع الظرف والموسيقى ---
